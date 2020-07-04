@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+using ll=long long;
+#define Max 1000
+int List[Max];
+void divisorFind(int n){
+    int listcount=0;
+    for(int i=1;i*i<=n;i++){
+        if(n%i==0){
+            if(n/i==i){
+                List[listcount++]=i;
+            }
+            else{
+                List[listcount++]=i;
+                List[listcount++]=n/i;
+
+            }
+        }
+    }
+    for(int i=0;i<listcount;i++){
+        cout<<List[i]<<endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    divisorFind(n);
+    return 0;
+}
