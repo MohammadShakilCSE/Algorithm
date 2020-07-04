@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int countDivisor(int n){
+    int divisor=0;
+    for(int i=1;i*i<=n;i++){
+        if(n%i==0){
+            if(n/i==i)
+                divisor++;
+            else
+                divisor+=2;
+        }
+
+    }
+    return divisor;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int divisor=countDivisor(n);
+    cout<<divisor;
+    return 0;
+}
