@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a;
+    cin>>a;
+    //a<<n==a*2^n
+    cout<<(a<<1)<<" "<<(a<<2)<<" "<<(a<<3)<<endl;
+    //a>>n ==a/2^n
+    cout<<(a>>1)<<" "<<(a>>2)<<" "<<(a>>3)<<endl;
+    return 0;
+}
